@@ -1,5 +1,4 @@
 
-import java.util.PriorityQueue;
 import java.util.Vector;
 
 /*
@@ -8,9 +7,8 @@ import java.util.Vector;
  * and open the template in the editor.
  */
 
-public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
+public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E> 
 {
-
 	protected Vector<E> data; // the data, kept in heap order
 
 	public VectorHeap()
@@ -29,6 +27,9 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 			add(v.get(i));
 		}
 	}
+        public void clear(){
+            data = null;
+        }
 	protected static int parent(int i)
 	// pre: 0 <= i < size
 	// post: returns parent of node at location i
@@ -118,3 +119,19 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		if (data.size() > 1) pushDownRoot(0);
 		return minVal;
 	}
+
+    @Override
+    public E getFirst() {
+       return data.get(0); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return data == null; //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int size() {
+        return data.size(); //To change body of generated methods, choose Tools | Templates.
+    }
+}
