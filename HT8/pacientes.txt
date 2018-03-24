@@ -1,4 +1,6 @@
-Maria Ramirez, apendicitis, A
-Carmen Sarmientos, dolores de parto, B
 Juan Perez, fractura de pierna, C
+Diego Sevilla, Dolor de corazon, B
+Carmen Sarmientos, dolores de parto, B
+Maria Ramirez, apendicitis, A
 Lorenzo Toledo, chikunguya, E
+Paul Belches, Dolor de Cerebro, A
