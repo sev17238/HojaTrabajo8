@@ -36,7 +36,7 @@ public class Main {
             System.out.println("Ingrese el nombre del archivo.txt con los pacientes en espera (Ej. pacientes.txt): ");
             String file = teclado.nextLine();
             
-            BufferedReader br = new BufferedReader(new FileReader(file));  
+            BufferedReader br = new BufferedReader(new FileReader("pacientes.txt"));  
 
             try {                
                 StringBuilder sb = new StringBuilder();
@@ -58,22 +58,19 @@ public class Main {
                 System.out.println("Que desea hacer?\n1. Retirar paciente siguiente \n2. Salir ");
                 decision = teclado.nextInt();
                 
-                Paciente pa;
+                Paciente pa = null;
                 while(decision != 2){
                     if(entry.equals("1")){
-                        pa = heap.remove();
-                        if(pa != null){
-                            System.out.println("\nPaciente a atender:\n"+pa.getName()+", "+pa.getDescription()+"; "+pa.getCode()+"\n");
-                        }else{
-                            System.out.println("Ya no hay pacientes que atender.");
-                        }
+                        
+                        if (!(heap.isEmpty())) pa = heap.remove();
+                        else pa = null;
+                        if(pa != null) System.out.println("\nPaciente a atender:\n"+pa.getName()+", "+pa.getDescription()+"; "+pa.getCode()+"\n");
+                        else System.out.println("Ya no hay pacientes que atender.");
+                        
                     }else{
                         pa = queue.poll();
-                        if(pa != null){
-                            System.out.println("\nPaciente a atender:\n"+pa.getName()+", "+pa.getDescription()+"; "+pa.getCode()+"\n");
-                        }else{
-                            System.out.println("Ya no hay pacientes que atender.");
-                        }
+                        if(pa != null)  System.out.println("\nPaciente a atender:\n"+pa.getName()+", "+pa.getDescription()+"; "+pa.getCode()+"\n");
+                        else System.out.println("Ya no hay pacientes que atender.");
                         System.out.println("\n"+pa.getName()+", "+pa.getDescription()+"; "+pa.getCode()+"\n");
                     }                     
                     System.out.println("Que desea hacer?\n1. Retirar paciente siguiente \n2. Salir ");

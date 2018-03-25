@@ -128,7 +128,7 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 
     @Override
     public boolean isEmpty() {
-        return data == null; //To change body of generated methods, choose Tools | Templates.
+        return data.isEmpty(); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
