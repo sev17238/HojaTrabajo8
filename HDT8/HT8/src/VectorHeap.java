@@ -2,7 +2,7 @@
 import java.util.Vector;
 
 /**
- * 
+ * Clase que representa la implementacion de VectorHeap.
  * @author Paul Belches 17088 - Diego Sevilla 17238
  * @Date 25/03/18
  * @param <E> 

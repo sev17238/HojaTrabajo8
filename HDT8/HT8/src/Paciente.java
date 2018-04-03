@@ -1,6 +1,6 @@
 
 /**
- *
+ * Clase que representa a un paciente con nombre, descripcion de su padecimiento y su codigo de importancia.
  * @author Paul Belches 17088 - Diego Sevilla 17238
  */
 public class Paciente implements Comparable<Paciente>{
@@ -8,8 +8,7 @@ public class Paciente implements Comparable<Paciente>{
     private String Description;
     private String Code;
 
-    /** COnstructor de la clase
-     *
+    /** COnstructor de la clase crea un nuevo paciente     *
      * @param Name
      * @param Description
      * @param Code
@@ -21,47 +20,47 @@ public class Paciente implements Comparable<Paciente>{
     }
 
     /**
-     *
-     * @return
+     * devuelve el nombre del paciente
+     * @return el nombre
      */
     public String getName() {
         return Name;
     }
 
     /**
-     *
-     * @param Name
+     * coloca el nombre del paciente
+     * @param Name el nombre
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     *
-     * @return
+     * devuelve la descripccion del padecimiento
+     * @return la descripcion
      */
     public String getDescription() {
         return Description;
     }
 
     /**
-     *
-     * @param Description
+     * coloca la descripcion del padecimeinto del paciente
+     * @param Description la descripcion
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     *
-     * @return
+     * devuelve el codigo de importancia del paciente
+     * @return el codigo
      */
     public String getCode() {
         return Code;
     }
 
     /**
-     *
+     * coloca el codigo del paciente
      * @param Code
      */
     public void setCode(String Code) {
